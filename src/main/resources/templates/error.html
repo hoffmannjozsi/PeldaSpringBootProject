@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <style>
+table td{
+vertical-align:top;
+border:solid 1px #888;
+padding:10px;
+}
+
+    </style>
+</head>
+<body>
+<h1>Thymeleaf hiba oldal</h1>
+<table>
+    <tr>
+        <td>Dátum</td>
+        <td th:text="${#dates.format(timestamp, 'yyyy.MM.dd HH.mm')}"/>
+    </tr>
+    <tr>
+        <td>Útvonal</td>
+        <td th:text="${path}"/>
+    </tr>
+    <tr>
+        <td>Hiba</td>
+        <td th:text="${error}"/>
+    </tr>
+    <tr>
+        <td>Státusz</td>
+        <td th:text="${status}"/>
+    </tr>
+    <tr>
+        <td>Üzenet</td>
+        <td th:text="${message}"/>
+    </tr>
+    <tr>
+        <td>Kivétel</td>
+        <td th:text="${exception}"/>
+    </tr>
+    <tr>
+        <td>Nyom</td>
+        <td>
+            <pre th:text="${trace}"/>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

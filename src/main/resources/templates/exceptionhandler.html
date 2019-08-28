@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <style>
+table td{
+vertical-align:top;
+border:solid 1px #888;
+padding:10px;
+}
+
+    </style>
+</head>
+<body>
+<h1>Thymeleaf hiba oldal</h1>
+<table>
+    <tr>
+        <td>Dátum</td>
+        <td th:text="${errMessage}"/>Kivétel üzenet
+    </tr>
+    </table>
+</body>
+</html>
